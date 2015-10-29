@@ -75,6 +75,16 @@
             <version>7.5.6</version>
         </dependency>
         <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-server</artifactId>
+            <version>7.5.6</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-themes</artifactId>
+            <version>7.5.6</version>
+        </dependency>
+        <dependency>
             <groupId>org.eclipse.che.core</groupId>
             <artifactId>che-core-api-account</artifactId>
             <version>${che.core.version}</version>
@@ -372,6 +382,7 @@
                 </dependencies>
                 <configuration>
                     <extraJvmArgs>${gwt.compiler.extraJvmArgs}</extraJvmArgs>
+                    <webappDirectory>${basedir}/target/assembly-sdk-war-4.0.0-M4-SNAPSHOT/VAADIN/widgetsets</webappDirectory>
                     <modules>
                         <module>org.eclipse.che.ide.IDE</module>
                     </modules>

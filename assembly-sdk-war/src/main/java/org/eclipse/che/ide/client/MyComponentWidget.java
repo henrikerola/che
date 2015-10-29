@@ -10,21 +10,22 @@
  *******************************************************************************/
 package org.eclipse.che.ide.client;
 
-import com.vaadin.client.ui.AbstractComponentConnector;
-import com.vaadin.shared.ui.Connect;
-import org.eclipse.che.MyComponent;
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.LayoutPanel;
 
 /**
  * @author Henri Kerola / Vaadin
  */
-@Connect(MyComponent.class)
-public class MyComponentConnector extends AbstractComponentConnector {
+public class MyComponentWidget extends LayoutPanel {
 
-    public MyComponentConnector() {
-    }
+    public MyComponentWidget() {
 
-    @Override
-    public MyComponentWidget getWidget() {
-        return (MyComponentWidget) super.getWidget();
+        MyInjector injector = GWT.create(MyInjector.class);
+        MyComponentBootstrapper bootstrap = injector.getBootstrapper();
+        bootstrap.startComponents(this);
+
+        Window.alert("" + bootstrap);
+
     }
 }

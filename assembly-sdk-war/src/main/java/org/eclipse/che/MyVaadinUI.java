@@ -21,7 +21,7 @@ import com.vaadin.ui.VerticalLayout;
  * @author Henri Kerola / Vaadin
  */
 @Theme("valo")
-@Widgetset("org.eclipse.che.ide.VaadinWidgetset")
+@Widgetset("_app")
 public class MyVaadinUI extends com.vaadin.ui.UI {
     @Override
     protected void init(VaadinRequest request) {
