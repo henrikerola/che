@@ -65,6 +65,16 @@
             <version>${com.google.code.guice.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-client</artifactId>
+            <version>7.5.6</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-client-compiler</artifactId>
+            <version>7.5.6</version>
+        </dependency>
+        <dependency>
             <groupId>org.eclipse.che.core</groupId>
             <artifactId>che-core-api-account</artifactId>
             <version>${che.core.version}</version>
@@ -305,6 +315,32 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-maven-plugin</artifactId>
+                <version>7.5.6</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <!--<goal>compile</goal>-->
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <extraJvmArgs>${gwt.compiler.extraJvmArgs}</extraJvmArgs>
+                    <!-- <extraJvmArgs>-Xmx512M -Xss1024k</extraJvmArgs> -->
+                    <webappDirectory>${basedir}/target/assembly-sdk-war-4.0.0-M4-SNAPSHOT/VAADIN/widgetsets</webappDirectory>
+                    <draftCompile>false</draftCompile>
+                    <compileReport>false</compileReport>
+                    <style>OBF</style>
+                    <strict>true</strict>
+                    <modules>
+                        <module>org.eclipse.che.ide.IDE</module>
+                    </modules>
+                    <logLevel>${gwt.compiler.logLevel}</logLevel>
+                    <enableClosureCompiler>${gwt.compiler.enableClosureCompiler}</enableClosureCompiler>
+                </configuration>
+            </plugin>
             <!-- GWT Maven Plugin -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -341,6 +377,8 @@
                     </modules>
                     <logLevel>${gwt.compiler.logLevel}</logLevel>
                     <enableClosureCompiler>${gwt.compiler.enableClosureCompiler}</enableClosureCompiler>
+                    <strict>false</strict>
+                    <style>PRETTY</style>
                 </configuration>
             </plugin>
             <plugin>

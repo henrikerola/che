@@ -65,7 +65,8 @@
     <stylesheet src="IDE.css"/>
 
     <!-- Specify the app entry point class.                         -->
-    <entry-point class='org.eclipse.che.ide.client.IDE'/>
+    <inherits name="com.vaadin.DefaultWidgetSet" />
+    <!--<entry-point class='org.eclipse.che.ide.client.IDE'/>-->
 
     <!-- Specify the paths for translatable code                    -->
     <source path='client'/>
