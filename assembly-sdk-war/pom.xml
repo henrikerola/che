@@ -387,9 +387,9 @@
                         <module>org.eclipse.che.ide.IDE</module>
                     </modules>
                     <logLevel>${gwt.compiler.logLevel}</logLevel>
-                    <enableClosureCompiler>${gwt.compiler.enableClosureCompiler}</enableClosureCompiler>
+                    <enableClosureCompiler>false</enableClosureCompiler>
                     <strict>false</strict>
-                    <style>PRETTY</style>
+                    <style>DETAILED</style>
                 </configuration>
             </plugin>
             <plugin>
