@@ -84,8 +84,6 @@ public class MyComponentBootstrapper {
         this.managerProvider = managerProvider;
         this.appStateManagerProvider = appStateManagerProvider;
 
-        Window.alert("1");
-
         presentationFactory = new PresentationFactory();
 
         // Register DTO providers
@@ -98,7 +96,7 @@ public class MyComponentBootstrapper {
     }
 
     private void componentStartFail(Exception reason) {
-        Log.error(BootstrapController.class, reason);
+        Log.error(MyComponentBootstrapper.class, reason);
         initializationFailed(reason);
     }
 

@@ -10,6 +10,7 @@
  *******************************************************************************/
 package org.eclipse.che;
 
+import com.vaadin.annotations.JavaScript;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Widgetset;
 import com.vaadin.server.VaadinRequest;
@@ -22,6 +23,7 @@ import com.vaadin.ui.VerticalLayout;
  */
 @Theme("valo")
 @Widgetset("_app")
+@JavaScript("che-init.js")
 public class MyVaadinUI extends com.vaadin.ui.UI {
     @Override
     protected void init(VaadinRequest request) {

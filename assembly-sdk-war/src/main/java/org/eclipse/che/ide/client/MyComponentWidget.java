@@ -11,7 +11,6 @@
 package org.eclipse.che.ide.client;
 
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.LayoutPanel;
 
 /**
@@ -24,8 +23,5 @@ public class MyComponentWidget extends LayoutPanel {
         MyInjector injector = GWT.create(MyInjector.class);
         MyComponentBootstrapper bootstrap = injector.getBootstrapper();
         bootstrap.startComponents(this);
-
-        Window.alert("" + bootstrap);
-
     }
 }

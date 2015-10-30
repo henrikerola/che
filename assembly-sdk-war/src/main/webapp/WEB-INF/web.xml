@@ -41,17 +41,11 @@
         <url-pattern>/VAADIN/*</url-pattern>
     </servlet-mapping>
 
-    <!--
-    <servlet>
-        <servlet-name>IDE</servlet-name>
-        <jsp-file>/IDE.jsp</jsp-file>
-    </servlet>
-
     <servlet-mapping>
-        <servlet-name>IDE</servlet-name>
+        <servlet-name>default</servlet-name>
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
-    -->
+
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>/_app/*</url-pattern>
